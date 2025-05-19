@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" styleClass="content-area" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vetcare360.controller.WelcomeController">
+   <padding>
+      <Insets bottom="32.0" left="32.0" right="32.0" top="32.0" />
+   </padding>
+   <children>
+      <Label styleClass="page-title" text="Welcome to VetCare 360">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label styleClass="subtitle" text="Comprehensive Veterinary Practice Management">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label styleClass="welcome-text" text="VetCare 360 helps you manage your veterinary practice efficiently by organizing animal records, appointments, and vet information all in one place." textAlignment="CENTER" wrapText="true">
+         <VBox.margin>
+            <Insets bottom="24.0" left="64.0" right="64.0" top="16.0" />
+         </VBox.margin>
+      </Label>
+      <HBox alignment="CENTER" spacing="24.0">
+         <children>
+            <VBox alignment="TOP_CENTER" styleClass="feature-card">
+               <children>
+                  <Label styleClass="feature-title" text="Veterinarians" />
+                  <Label styleClass="feature-desc" text="Manage vet profiles and specialties" textAlignment="CENTER" wrapText="true" />
+                  <Button mnemonicParsing="false" onAction="#handleViewVets" styleClass="feature-button" text="View Veterinarians" />
+               </children>
+               <padding>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="TOP_CENTER" styleClass="feature-card">
+               <children>
+                  <Label styleClass="feature-title" text="Pet Owners" />
+                  <Label styleClass="feature-desc" text="Find, add, and manage client information" textAlignment="CENTER" wrapText="true" />
+                  <Button mnemonicParsing="false" onAction="#handleSearchOwners" styleClass="feature-button" text="Search Owners" />
+               </children>
+               <padding>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="TOP_CENTER" styleClass="feature-card">
+               <children>
+                  <Label styleClass="feature-title" text="Pets &amp; Visits" />
+                  <Label styleClass="feature-desc" text="Track pet medical records and visit history" textAlignment="CENTER" wrapText="true" />
+                  <Button mnemonicParsing="false" onAction="#handleViewAllOwners" styleClass="feature-button" text="Browse Records" />
+               </children>
+               <padding>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="16.0" styleClass="content-area" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vetcare360.controller.OwnerListController">
+   <padding>
+      <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+   </padding>
+   <children>
+      <Label styleClass="page-title" text="All Pet Owners">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label styleClass="page-description" text="Double-click on a row to view owner details" textAlignment="CENTER" wrapText="true">
+         <VBox.margin>
+            <Insets bottom="16.0" />
+         </VBox.margin>
+      </Label>
+      <TableView fx:id="ownerTable">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="200.0" text="Name" />
+          <TableColumn fx:id="addressColumn" prefWidth="250.0" text="Address" />
+            <TableColumn fx:id="cityColumn" prefWidth="150.0" text="City" />
+            <TableColumn fx:id="phoneColumn" prefWidth="150.0" text="Phone" />
+            <TableColumn fx:id="petsColumn" prefWidth="150.0" text="Pets" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="16.0" styleClass="content-area" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vetcare360.controller.VeterinarianListController">
+    <padding>
+        <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+    </padding>
+    <children>
+        <Label styleClass="page-title" text="Veterinarians">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <HBox alignment="CENTER_LEFT" spacing="16.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#handleAddNewVet" styleClass="action-button" text="Add New Veterinarian" />
+            </children>
+            <VBox.margin>
+                <Insets bottom="16.0" />
+            </VBox.margin>
+        </HBox>
+        <TableView fx:id="vetTable">
+            <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="200.0" text="Name" />
+                <TableColumn fx:id="specialityColumn" prefWidth="150.0" text="Speciality" />
+                <TableColumn fx:id="emailColumn" prefWidth="200.0" text="Email" />
+                <TableColumn fx:id="phoneColumn" prefWidth="150.0" text="Phone" />
+            </columns>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </TableView>
+    </children>
+</VBox>
